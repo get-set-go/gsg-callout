@@ -11,10 +11,16 @@ export default class GSGCallout extends React.Component {
       [`callout-${this.props.bStyle}`]: true
     };
 
+    _bClass = classNames(_bClass);
+
     return(
       <div className={_bClass}>
         {this.props.children}
       </div>
     );
   }
+};
+
+GSGCallout.defaultProps = {
+  bStyle: 'primary'
 };
